@@ -18,40 +18,40 @@ represent possible transfers of control.  A program with no branching has
 complexity 1; each `if` statement increases the complexity by one path; loops
 and compound conditionals add further paths【733509849101575†L178-L187】.  Tom McCabe proposed
 a categorisation of complexity into four risk levels: 1–10 (simple), 11–20
-(moderate), 21–50 (complex) and >50 (very high risk)【733509849101575†L249-L253】.  High complexity
+(moderate), 21–50 (complex) and >50 (very high risk).  High complexity
 correlates with greater testing effort and risk of defects.
 
 ### Coding style
 
 For Python code, PEP 8 provides comprehensive style guidelines.  It
 recommends using four spaces per indentation level and discourages mixing
-tabs and spaces【263717488702505†L121-L156】.  It also advises limiting line length to 79
+tabs and spaces.  It also advises limiting line length to 79
 characters to make code easier to read and to accommodate side‑by‑side
-diffs【263717488702505†L234-L249】.  These conventions improve readability and facilitate code
+diffs.  These conventions improve readability and facilitate code
 reviews.
 
 ### SOLID principles
 
 The SOLID acronym summarises five object‑oriented design guidelines that
 improve maintainability.  The single‑responsibility principle states that a
-class should have only one reason to change【821855371965911†L193-L205】.  The open‑closed
+class should have only one reason to change.  The open‑closed
 principle requires that software entities be open to extension but closed
 to modification, i.e. behaviour is added through composition or inheritance
-without altering existing code【821855371965911†L212-L221】.  The Liskov substitution principle
+without altering existing code.  The Liskov substitution principle
 demands that subclasses be usable anywhere their base class is expected
-without breaking correctness【821855371965911†L227-L240】.  Interface segregation
-advises against forcing clients to depend on methods they do not use【821855371965911†L246-L257】, and
+without breaking correctness.  Interface segregation
+advises against forcing clients to depend on methods they do not use, and
 dependency inversion encourages modules to depend on abstractions rather than
-concrete implementations【821855371965911†L263-L274】.
+concrete implementations.
 
 ### Functional programming
 
 Functional programming treats computation as the evaluation of mathematical
 functions and emphasises pure functions, immutability and higher‑order
 functions.  Pure functions take inputs and return outputs without side
-effects, making programs easier to reason about【636678559067727†L19-L34】.  The paradigm also
+effects, making programs easier to reason about.  The paradigm also
 encourages the use of `map`, `filter`, `reduce` and lambda expressions to
-compose behaviour【636678559067727†L42-L63】.
+compose behaviour.
 
 ## Features
 
@@ -62,9 +62,9 @@ The analyser computes for each source file:
   expressions.  These counts give an idea of a file’s structure.
 * **Cyclomatic complexity (approximate)** – calculated by scanning for
   branching keywords such as `if`, `for`, `while` and logical operators; the
-  result is categorised using McCabe’s risk thresholds【733509849101575†L249-L253】.
+  result is categorised using McCabe’s risk thresholds.
 * **Style checks** – the number of lines exceeding 79 characters and whether
-  Python files mix tabs and spaces【263717488702505†L121-L156】【263717488702505†L234-L249】.  A comment ratio is also
+  Python files mix tabs and spaces.  A comment ratio is also
   reported.
 
 After collecting these low‑level metrics the tool synthesises them into
@@ -78,7 +78,7 @@ higher‑level insights:
 * **Functional programming scores** – ratios of pure functions (no assignments
   or print statements), occurrences of higher‑order constructs (lambda,
   `map`, `filter`, `reduce`) and keywords denoting immutability such as
-  `const`, `final` or `immutable`【636678559067727†L19-L34】【636678559067727†L42-L63】.
+  `const`, `final` or `immutable`.
 
 ## Usage
 
