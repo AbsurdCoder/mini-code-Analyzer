@@ -12,11 +12,11 @@ improvements to structure and style.
 ### Complexity metrics
 
 Cyclomatic complexity is a software metric that quantifies the number of
-linearly independent paths through a program’s source code【733509849101575†L144-L153】.  It is computed
+linearly independent paths through a program’s source code.  It is computed
 using a control‑flow graph, where nodes represent groups of commands and edges
 represent possible transfers of control.  A program with no branching has
 complexity 1; each `if` statement increases the complexity by one path; loops
-and compound conditionals add further paths【733509849101575†L178-L187】.  Tom McCabe proposed
+and compound conditionals add further paths.  Tom McCabe proposed
 a categorisation of complexity into four risk levels: 1–10 (simple), 11–20
 (moderate), 21–50 (complex) and >50 (very high risk).  High complexity
 correlates with greater testing effort and risk of defects.
@@ -107,4 +107,4 @@ therefore cannot understand scopes, data types or dynamic behaviour.  All
 metrics and principle evaluations are approximations intended to highlight
 potential issues rather than provide definitive judgments.  For more accurate
 analysis, consider using language‑specific static analysers (e.g. linters,
-SonarQube) and manual code reviews【118729577616228†L123-L143】.
+SonarQube) and manual code reviews.
